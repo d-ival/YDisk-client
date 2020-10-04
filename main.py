@@ -60,7 +60,7 @@ class YDiskUploader:
 
 
 if __name__ == '__main__':
-    with open("access-token.txt") as tokenfile:
+    with open("tests\ydisk_token.txt") as tokenfile:
         token = tokenfile.read().strip()
     uploader = YDiskUploader('c:\\tmp\\testydisk.txt', token=token, destination_folder='Обучение\\Netology\\Python\\YDisk client')
     result = uploader.upload()
