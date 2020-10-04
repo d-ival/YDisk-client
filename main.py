@@ -2,7 +2,7 @@ import os
 import requests
 import json
 
-class YaUploader:
+class YDiskUploader:
     def __init__(self, file_path: str, token: str, destination_folder: str = "/"):
         self.file_path = file_path
         self.oauth_token = token
@@ -62,6 +62,6 @@ class YaUploader:
 if __name__ == '__main__':
     with open("access-token.txt") as tokenfile:
         token = tokenfile.read().strip()
-    uploader = YaUploader('c:\\tmp\\testydisk.txt', token=token, destination_folder='Обучение\\Netology\\Python\\YDisk client')
+    uploader = YDiskUploader('c:\\tmp\\testydisk.txt', token=token, destination_folder='Обучение\\Netology\\Python\\YDisk client')
     result = uploader.upload()
     print(result["msg"])
